@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E6F379B546F0BA694DB0080 /* libPods-ExampleThree.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7388C0AC8C6C85F80EB6ED37 /* libPods-ExampleThree.a */; };
 		D221CB961E8DD8CD000DBB06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D221CB951E8DD8CD000DBB06 /* main.m */; };
 		D221CB991E8DD8CD000DBB06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D221CB981E8DD8CD000DBB06 /* AppDelegate.m */; };
 		D221CB9C1E8DD8CD000DBB06 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D221CB9B1E8DD8CD000DBB06 /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52A88CF82DC25A31CFBD276D /* Pods-ExampleThree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleThree.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleThree/Pods-ExampleThree.release.xcconfig"; sourceTree = "<group>"; };
+		7388C0AC8C6C85F80EB6ED37 /* libPods-ExampleThree.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ExampleThree.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		817456BE7A5FAC41057657D4 /* Pods-ExampleThree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleThree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExampleThree/Pods-ExampleThree.debug.xcconfig"; sourceTree = "<group>"; };
 		D221CB911E8DD8CD000DBB06 /* ExampleThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D221CB951E8DD8CD000DBB06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D221CB971E8DD8CD000DBB06 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6F379B546F0BA694DB0080 /* libPods-ExampleThree.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		019546B220CF24391D1EBCE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				817456BE7A5FAC41057657D4 /* Pods-ExampleThree.debug.xcconfig */,
+				52A88CF82DC25A31CFBD276D /* Pods-ExampleThree.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7CC23263585B5670FA767257 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7388C0AC8C6C85F80EB6ED37 /* libPods-ExampleThree.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D221CB881E8DD8CC000DBB06 = {
 			isa = PBXGroup;
 			children = (
 				D221CB931E8DD8CD000DBB06 /* ExampleThree */,
 				D221CB921E8DD8CD000DBB06 /* Products */,
+				019546B220CF24391D1EBCE4 /* Pods */,
+				7CC23263585B5670FA767257 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D221CBA81E8DD8CD000DBB06 /* Build configuration list for PBXNativeTarget "ExampleThree" */;
 			buildPhases = (
+				A58C4037682D453E04394442 /* [CP] Check Pods Manifest.lock */,
 				D221CB8D1E8DD8CC000DBB06 /* Sources */,
 				D221CB8E1E8DD8CC000DBB06 /* Frameworks */,
 				D221CB8F1E8DD8CC000DBB06 /* Resources */,
+				F8C6268871321567D2BC4C73 /* [CP] Embed Pods Frameworks */,
+				E3D9DF6CFAB20F4B802FDD41 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A58C4037682D453E04394442 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E3D9DF6CFAB20F4B802FDD41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleThree/Pods-ExampleThree-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8C6268871321567D2BC4C73 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ExampleThree/Pods-ExampleThree-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D221CB8D1E8DD8CC000DBB06 /* Sources */ = {
@@ -270,6 +345,7 @@
 		};
 		D221CBA91E8DD8CD000DBB06 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 817456BE7A5FAC41057657D4 /* Pods-ExampleThree.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ExampleThree/Info.plist;
@@ -281,6 +357,7 @@
 		};
 		D221CBAA1E8DD8CD000DBB06 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52A88CF82DC25A31CFBD276D /* Pods-ExampleThree.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ExampleThree/Info.plist;
